@@ -1,0 +1,14 @@
+.image{
+    height: 48em;
+    background-size: cover;
+    width: 109.6em;
+    background-image: url('/assets/images.jpg');
+    background-position: 100%;
+}
+.a{
+    margin-right: 20px
+}
+.c{
+   
+    font-size: 20px
+}

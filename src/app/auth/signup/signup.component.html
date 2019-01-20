@@ -1,0 +1,38 @@
+<div class="image">
+<div class="row">
+
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2" >
+      <b> Registration </b>
+      <form [formGroup]="userform" (ngSubmit)="onSignup(f)" #f="ngForm" >
+          <div class="form-group" >
+         
+          <br/>
+          <br/>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" formControlName= "email" class="form-control">
+          <div class="help-block" *ngIf="userform.get('email').errors &&
+          (userform.get('email').touched || userform.get('email').dirty)" >
+
+          <div class="mssg" *ngIf="userform.get('email').errors.required" > Email address is required.
+          </div>
+          <div class="mssg" *ngIf= "userform.get('email').errors.email" >Email must be  a valid email address.</div>
+        </div>
+          </div>
+        <br/>
+        <div class="form-group">
+        <label for="password">Password</label>
+            <input type="password" id="password" name="password"  class="form-control" formControlName= "password"
+            >
+            <div class="help-block" *ngIf="userform.get('password').errors &&
+            (userform.get('password').touched || userform.get('password').dirty)">
+              <div class="mssg" *ngIf="userform.get('password').errors.required" >Password is required.</div>
+                <div class="mssg" *ngIf="userform.get('password').errors.minlength" >Password must be atleast 6 character.</div>
+              </div>
+              </div>
+              <!-- <input type="radio"  name="" value="Instructor" formControlName= "Instructor" > Instructor<br>
+              <input type="radio"  name="" value="Student" formControlName="Student"> Student<br> -->
+            <button class="btn btn-primary"  type="submit" [disabled]="!userform.valid" >Sign Up</button>
+          </form>
+  </div>
+</div>
+</div>

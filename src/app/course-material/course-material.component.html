@@ -1,0 +1,47 @@
+<div class="image">
+<div class="row">
+  <div class="col-xs-12">
+      
+    <form>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+            
+          
+          <label for="name">Course Material </label>
+          
+          <input type="text" id="name" class="form-control" #nameInput> 
+          <!-- nameinput is a local referenece -->
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- click: is a click listener ,listen to on add course method in ts file-->
+          <button class="btn btn-success a " type="button" (click)="onAddCourseMaterial()" > Add Course Material </button>
+          <button class="btn btn-success " type="button" routerLink='/courseslist' > Back </button>
+         
+        
+        </div>
+      
+      </div>
+    </form> 
+     
+  </div>
+  </div>
+  <br/>
+  
+<div class="row">
+    <div class="col-xs-10">
+     <ul class="list-group">
+        <!-- ngFor to loop through all the courses material
+           courses.name to output data here -->
+
+      <a class="list-group-item" style="cursor: pointer" *ngFor=" let coursesmaterial of coursesmaterial" style="color:blue">
+      {{coursesmaterial.name}}
+      
+    </a>
+      </ul> 
+        
+    </div>
+    </div>
+</div>

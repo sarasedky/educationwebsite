@@ -1,0 +1,22 @@
+<div class="image">
+        <div class="row">
+          <div class="col-xs-10">
+            <!-- listen to on courses added here 
+            execute oncoursesadded -->
+          <app-courses-edit  ></app-courses-edit>
+            
+            <ul class="list-group">
+              <!-- ngFor to loop through all the courses 
+                 courses.name to output data here -->
+            <a class="list-group-item c"  style="cursor: pointer" *ngFor=" let courses of courses" style="color:blue" >
+            {{courses.name}}
+            <br/>
+     
+            <button class="btn btn-success a" routerLink='/coursematerial' type="button"> Add Material </button>
+            
+            <button class="btn btn-success" routerLink='/addannouncement' type="button" > Announcement </button>
+          </a>
+            </ul>
+            </div>
+          </div>
+          </div>

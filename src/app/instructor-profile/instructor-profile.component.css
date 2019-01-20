@@ -1,0 +1,8 @@
+.image{
+    height: 55em;
+    background-size: cover;
+    
+    width: 109.5em;
+    background-image: url('/assets/images.jpg');
+    background-position: 100%;
+}

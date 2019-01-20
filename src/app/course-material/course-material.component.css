@@ -1,0 +1,13 @@
+.image{
+    height: 48em;
+    background-size: cover;
+    width: 109.7em;
+    background-image: url('/assets/images.jpg');
+    background-position: 100%;
+}
+h2{
+    color:rgb(80, 79, 79)
+}
+.a{
+    margin-right: 1320px;
+}

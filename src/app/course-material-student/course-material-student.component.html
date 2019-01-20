@@ -1,0 +1,25 @@
+
+<div class="image">
+<div class="row">
+
+  <div class="col-xs-10">
+   <ul class="list-group">
+      <!-- ngFor to loop through all the courses material
+         courses.name to output data here -->
+         <h3><b> Course material</b></h3>
+         <button class="btn btn-success v " type="button" routerLink='/coursesstudent' > Back </button>
+
+    <a class="list-group-item " style="cursor: pointer" *ngFor=" let coursesmaterial of coursesmaterial" style="color:blue">
+    {{coursesmaterial.name }}
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Auto width -->
+<button class="btn x"><i class="fa fa-download"></i> Download</button>
+    
+  </a>
+    </ul>
+      
+  
+  </div>
+</div>
+</div>

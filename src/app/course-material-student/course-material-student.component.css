@@ -1,0 +1,22 @@
+.image{
+    height: 50em;
+    background-size: cover;
+    width: 109.7em;
+    background-image: url('/assets/images.jpg');
+    background-position: 100%;
+}
+.v{
+    margin-left: 1474px;
+    font-size: 50px;
+  }
+.btn {
+    background-color: green;
+    color: white;
+    padding: 13px ;
+    cursor: pointer;
+    font-size: 8px;
+  }
+  .x{
+      margin-left: 1000px;
+  }
+  
