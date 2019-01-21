@@ -9,6 +9,7 @@ import { Courses } from './courses.model';
 import 'rxjs/Rx';
 import { CoursesMaterialService } from '../course-material/course-material.service';
 import { InstructorProfileService } from '../instructor-profile/instructor-profile.service';
+import { Observable } from 'rxjs/Rx';
 
 
 @Injectable()
@@ -34,8 +35,12 @@ export class DataStorageService {
     return this.httpClient.post('https://educationapp-11114.firebaseio.com/coursesmaterial.json',
     this.coursematerialservice.getcoursesmaterial());
   }
-  getCourses() {
 
+  getCourses() {
+ 
+
+
+  }
   //   return this.httpClient.get('https://educationapp-11114.firebaseio.com/courses.json')
   
   //     observe: 'body',
@@ -57,6 +62,6 @@ export class DataStorageService {
   //       });
   // }
   
-}
+
 
 }

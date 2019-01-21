@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild,ElementRef,  } from '@angular/core';
 import { Courses } from '../shared/courses.model';
+import { HttpClient } from '@angular/common/http';
 import { CoursesListService } from '../courses-list/courses-list.service';
 import { DataStorageService } from '../shared/data-storage.service';
+import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-courses-edit',
   templateUrl: './courses-edit.component.html',
@@ -12,9 +14,9 @@ export class CoursesEditComponent implements OnInit {
   // get value of nameinput by ViewChild
   @ViewChild ('nameInput') nameInputRef: ElementRef;
 
- 
+  courses: Observable<Courses[]>; 
    
-  constructor(private courselistservice:CoursesListService,private dataStorageService:DataStorageService) { }
+  constructor(private courselistservice:CoursesListService,private dataStorageService:DataStorageService,private httpClient: HttpClient) { }
  
   ngOnInit() {
   }
@@ -32,4 +34,7 @@ onSavaData(){
 //     console.log(response);
 // });
 }
+
+
+
 }
